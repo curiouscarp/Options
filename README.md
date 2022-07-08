@@ -1,4 +1,5 @@
 # Options
-Options pricing tools
 
-The tool features a Black-Scholes pricing model with greek calculations. Also it includes a binomial pricing tree tool for American style optins
+Features
+
+Black-Scholes pricing model with greek calculations. 2. Binomial pricing tree tool for American style optins
