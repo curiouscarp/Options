@@ -46,14 +46,14 @@ int main() {
         cin >> model;
 
         if(model){
-            BlackScholes* scholes_model = new BlackScholes(stock,strike,rf_rate/100,vol,time,call);
+            BlackScholes* scholes_model = new BlackScholes(stock,strike,rf_rate,vol,time,call);
             scholes_model->print();
         }
         else{
             uint32_t height;
             cout << "\nWhat height for tree?";
             cin >> height;
-            Tree* binomial_model = new Tree(stock,strike,rf_rate/100,vol,time,height,call);
+            Tree* binomial_model = new Tree(stock,strike,rf_rate,vol,time,height,call);
             binomial_model->print();
         }
 
