@@ -3,13 +3,14 @@
 
 #include "Tree.h"
 #include "BlackScholes.h"
+#include "cmath"
 
 using namespace std;
 
 int main() {
 
     double time,stock,strike,rf_rate,vol;
-    bool type,model;
+    bool call,model;
     cout << "Hello, World!" << std::endl;
     cout << "Welcome to the Options pricing tool\nThis calculates your put/call"
                  " using Black Scholes or binomial tree pricing.\n";
@@ -38,26 +39,26 @@ int main() {
 //        cin >> type;
 //
 //        cout << "Which pricing model would you like to use?";
-//        cout << "\n1 is for Black-Scholes and  0 is for binomial";
+//        cout << "\n1 for Black-Scholes and 0 for binomial";
 //        cin >> model;
 
         time = 2;
         stock = 100;
         strike = 105;
         rf_rate = 5;
-        vol = .182322;
-        type = 0;
+        vol = log(1.2);
+        call = false;
         model = 0;
 
         if(model){
-            BlackScholes* scholes_model = new BlackScholes(stock,strike,rf_rate,vol,time,type);
+            BlackScholes* scholes_model = new BlackScholes(stock,strike,rf_rate/100,vol,time,call);
             scholes_model->print();
         }
         else{
             uint32_t height;
-            cout << "\nWhat height for the tree?";
+            cout << "\nWhat height for tree?";
             cin >> height;
-            Tree* binomial_model = new Tree(stock,strike,rf_rate,vol,time,height,type);
+            Tree* binomial_model = new Tree(stock,strike,rf_rate/100,vol,time,height,call);
             binomial_model->print();
         }
 

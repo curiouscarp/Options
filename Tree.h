@@ -34,7 +34,8 @@ public:
     static double max(double one, double two);
 
 private:
-    Node** tree[5];
+    Node** tree;
+    uint32_t cols;
 };
 
 #endif //CS_TREE_H
