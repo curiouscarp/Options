@@ -43,7 +43,6 @@ void BlackScholes::Greeks(){
 
 void BlackScholes::print(){
     cout << "\nPrice: " << price << "\n";
-
 }
 
 double BlackScholes::normalCDF(double value)
