@@ -66,8 +66,9 @@ Tree::Tree(double sp, double strike, double risk_free_rate,
 }
 
 Tree::~Tree(){
-    cout << "Destructor";
-    //to implement
+    for(int i = 0; i<cols; ++i) {
+        delete [] tree[i];
+    }
 }
 
 void Tree::calculateAlives(double rrf, double up, double down, double step, uint32_t height){
