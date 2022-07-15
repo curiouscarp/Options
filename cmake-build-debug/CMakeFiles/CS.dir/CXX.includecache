@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zach/Documents/Quantative Finance/CS/OptionPricing/include/BlackScholes.h
+
+/Users/zach/Documents/Quantative Finance/CS/OptionPricing/src/BlackScholes.cpp
+iostream
+/Users/zach/Documents/Quantative Finance/CS/OptionPricing/src/iostream
+cmath
+/Users/zach/Documents/Quantative Finance/CS/OptionPricing/src/cmath
+../include/BlackScholes.h
+/Users/zach/Documents/Quantative Finance/CS/OptionPricing/include/BlackScholes.h
+
