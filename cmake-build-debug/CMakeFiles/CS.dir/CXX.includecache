@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zach/Documents/Quantative Finance/CS/OptionPricing/Tree.cpp
+iostream
+/Users/zach/Documents/Quantative Finance/CS/OptionPricing/iostream
+cmath
+/Users/zach/Documents/Quantative Finance/CS/OptionPricing/cmath
+Tree.h
+/Users/zach/Documents/Quantative Finance/CS/OptionPricing/Tree.h
+
+/Users/zach/Documents/Quantative Finance/CS/OptionPricing/Tree.h
+cstdint
+-
+
