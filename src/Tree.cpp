@@ -14,6 +14,7 @@ Tree::Tree(double sp, double strike, double risk_free_rate,
     //set up time step
     double step = time/(height-1);
 
+    //allocate memory and setup tree structure
     tree = new Node* [height];
     for(int i = 0; i<height; ++i) {
         tree[i] = new Node [i + 1];
