@@ -85,20 +85,6 @@ void Tree::calculateAlives(double rrf, double up, double down, double step, uint
     }
 }
 
-double Tree::dumpSells(uint32_t t){
-    /**
-     * To implement
-     */
-    return 0.0;
-}
-
-double Tree::getOptimalSell(uint32_t t){
-    /**
-     * To implement
-     */
-    return 0.0;
-}
-
 void Tree::print(){
     cout << "Binomial Prices:";
     for(int i = 0; i<cols; ++i){

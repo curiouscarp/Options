@@ -26,10 +26,6 @@ public:
 
     void calculateAlives(double rrf, double up, double down, double tstep, uint32_t alive);
 
-    double dumpSells(uint32_t time);
-
-    double getOptimalSell(uint32_t time);
-
     void print();
 
     static double max(double one, double two);

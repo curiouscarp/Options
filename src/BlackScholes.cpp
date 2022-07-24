@@ -32,7 +32,7 @@ t, bool style):stock_price(stock), strike_price(strike), risk_free_rate(rf_rate)
 }
 
 void BlackScholes::Greeks(){
-    cout << "for Avi to implement";
+    //to implement
     double delta=0,gamma=0,theta=0,vega=0,rho=0;
     cout << "Delta: " << delta;
     cout << "\nGamma: " << gamma;
