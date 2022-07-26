@@ -48,12 +48,12 @@ t, bool style):stock_price(stock), strike_price(strike), risk_free_rate(rf_rate)
     if(type){
         theta = ((-1 * (stock_price * N1d1 * vol)) / (2 * sqrt(time))) - (risk_free_rate *
                 strike_price * exp(-1 * risk_free_rate * time) * n_d2);
-        theta /= 365;
+        theta /= 365; //covert to daily
     }
     else{
         theta = ((-1 * (stock_price * N1d1 * vol)) / (2 * sqrt(time))) + (risk_free_rate *
                 strike_price * exp(-1 * risk_free_rate * time) * n_d2);
-        theta /= 365;
+        theta /= 365; //convert to daily
     }
 
     //calculate vega
