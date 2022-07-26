@@ -13,7 +13,7 @@ class BlackScholes{
 public:
 
     /**
-     * Constructs a new BlackScholes object to calculate price
+     * Constructs a new BlackScholes object to calculate price and greeks
      *
      * @param stock - current stock price from inputted by user
      * @param strike - desired strike inputted by user
@@ -25,13 +25,6 @@ public:
      */
     BlackScholes(double stock, double strike, double rf_rate, double vol, double time, bool type);
 
-    /**
-     * Prints delta gamma, theta, vega, and rho
-     *
-     * @param none
-     * @return none
-     */
-//    void Greeks();
 
     /**
      * Simple CDF for standard normal distribution using the error function
