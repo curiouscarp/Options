@@ -31,7 +31,7 @@ public:
      * @param none
      * @return none
      */
-    void Greeks();
+//    void Greeks();
 
     /**
      * Simple CDF for standard normal distribution using the error function
@@ -51,6 +51,9 @@ public:
 
 private:
     double stock_price, strike_price, risk_free_rate, vol, time, price;
+    //(1 for call and 0 for put)
     bool type;
+    //greeks
+    double delta,gamma,theta,vega,rho;
 };
 #endif //CS_BLACKSCHOLES_H

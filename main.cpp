@@ -22,7 +22,7 @@ int main() {
     while(!done){
 
         //Gather input
-        cout << "\nPlease enter the time to maturity\n";
+        cout << "\nPlease enter the time to maturity in years\n";
         cin >> time;
 
         cout << "\nEnter the current stock price\n";
@@ -31,11 +31,11 @@ int main() {
         cout << "\nEnter the your strike price\n";
         cin >> strike;
 
-        cout << "\nWhat is the current risk free rate (measured in percentage points)?\n";
+        cout << "\nWhat is the current risk free rate in percentage points\n";
         cin >> rf_rate;
         rf_rate /= 100;
 
-        cout << "\nWhat is the implied volatility (measured in standard deviations)?\n";
+        cout << "\nWhat is the implied volatility in annualized standard devs of log returns?\n";
         cin >> vol;
 
         cout << "\nLastly, is this a (1) call or (0) put?\n1 for call and 0 for put\n";
