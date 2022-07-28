@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/zach/Documents/Quantative Finance/CS/OptionPricing/include/BlackScholes.h
-
-/Users/zach/Documents/Quantative Finance/CS/OptionPricing/src/BlackScholes.cpp
+/Users/zach/Documents/Quantative Finance/CS/Options/generateData.cpp
+fstream
+-
 iostream
-/Users/zach/Documents/Quantative Finance/CS/OptionPricing/src/iostream
-cmath
-/Users/zach/Documents/Quantative Finance/CS/OptionPricing/src/cmath
-../include/BlackScholes.h
-/Users/zach/Documents/Quantative Finance/CS/OptionPricing/include/BlackScholes.h
+-
+include/generateData.h
+/Users/zach/Documents/Quantative Finance/CS/Options/include/generateData.h
+include/BlackScholes.h
+/Users/zach/Documents/Quantative Finance/CS/Options/include/BlackScholes.h
+
+/Users/zach/Documents/Quantative Finance/CS/Options/include/BlackScholes.h
+
+/Users/zach/Documents/Quantative Finance/CS/Options/include/generateData.h
 
