@@ -2,5 +2,6 @@
 
 Features:
 
-1. Black-Scholes pricing tool with greeks calculations. 
+1. Black-Scholes pricing tool with greeks calculations (plus CSV output)
 2. Binomial tree pricing tool for American style options.
+3. Heatmap from CSV with hover for greeks
