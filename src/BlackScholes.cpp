@@ -78,6 +78,31 @@ void BlackScholes::print(){
     cout << "Rho: " << rho << "\n";
 }
 
+double BlackScholes::getPrice() const{
+    return price;
+}
+
+double BlackScholes::getDelta() const{
+    return delta;
+}
+
+double BlackScholes::getGamma() const{
+    return gamma;
+}
+
+double BlackScholes::getTheta() const{
+    return theta;
+}
+
+
+double BlackScholes::getVega() const{
+    return vega;
+}
+
+double BlackScholes::getRho() const{
+    return rho;
+}
+
 double BlackScholes::normalCDF(double value)
 {
     return 0.5 * erfc(-value * M_SQRT1_2);
