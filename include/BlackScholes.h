@@ -42,6 +42,18 @@ public:
      */
     void print();
 
+    double getPrice() const;
+
+    double getDelta() const;
+
+    double getGamma() const;
+
+    double getTheta() const;
+
+    double getVega() const;
+
+    double getRho() const;
+
 private:
     double stock_price, strike_price, risk_free_rate, vol, time, price;
     //(1 for call and 0 for put)
