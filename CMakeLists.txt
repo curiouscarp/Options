@@ -7,4 +7,4 @@ add_executable(CS main.cpp
         include/Tree.h
         src/Tree.cpp
         include/BlackScholes.h
-        src/BlackScholes.cpp)
+        src/BlackScholes.cpp generateData.cpp include/generateData.h)
