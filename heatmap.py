@@ -1,4 +1,3 @@
-import mplcursors as mplcursors
 import seaborn as sns
 import pandas as pd
 import numpy as np
@@ -19,7 +18,7 @@ result = options.pivot(index='volatility', columns='underlying_price', values='o
 result = result.rename_axis("Volatility in annualized standard deviations of log returns")
 result = result.rename_axis("Underlying stock price",axis="columns")
 
-# Create an array to annotate the heatmap
+# Array for greeks support - to implement
 greeks = (np.asarray(["Delta:{0:.3f} \n Gamma:{1:.3f} \n Theta:{2:.3f} "
                       "\n Vega:{3:.3f} \n Rho:{4:.3f}".format(d,g,t,v,r)
                        for d,g,t,v,r in zip(delta.flatten(),
@@ -29,14 +28,16 @@ greeks = (np.asarray(["Delta:{0:.3f} \n Gamma:{1:.3f} \n Theta:{2:.3f} "
                                             rho.flatten())])
            ).reshape(30, 21)
 
+# Array for price annotations
 prices = [['{:.2f}'.format(item) for item in sublist] for sublist in option_price]
 
+# create plot
 fig, ax = plt.subplots(figsize=(30,21))
 title = "${} Strike Call Option Prices - 1 year expiry".format((strike_price[0][0]))
 plt.title(title,fontsize=16)
 ttl = ax.title
 ttl.set_position([.5,1.05])
 
+#generate and display heatmap
 heatmap = sns.heatmap(result,annot=prices,fmt="",cmap='RdYlGn_r',linewidths=.25,ax=ax)
-
 plt.show()

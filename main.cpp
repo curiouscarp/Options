@@ -11,7 +11,7 @@
 
 using namespace std;
 
-int main(int argc, char** argv) {
+int main(int argc, char* argv[]) {
     if(argc == 1){
         double time,stock,strike,rf_rate,vol;
         bool call,model;
@@ -78,7 +78,9 @@ int main(int argc, char** argv) {
         }
     }
     else{
-        generate();
+        //input strike price based on command line arg. doesn't include faulty input detection.
+        int price = atoi(argv[1]);
+        generate(price);
     }
     return 0;
 }

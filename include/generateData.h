@@ -6,6 +6,6 @@
 #define CS_GENERATEDATA_H
 
 void write_csv(double *a, int nrows, int ncols, std::ofstream &outs);
-int generate();
+int generate(int price);
 
 #endif //CS_GENERATEDATA_H

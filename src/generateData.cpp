@@ -2,13 +2,13 @@
 
 #include <fstream>
 #include <iostream>
-#include "include/generateData.h"
-#include "include/BlackScholes.h"
+#include "../include/generateData.h"
+#include "../include/BlackScholes.h"
 
 using namespace std;
 
-int generate(){
-    int strike = 50;
+int generate(int price){
+    int strike = price;
     //yaxis volatility (.1 to 3) increment by .1 (30 range)
     //xaxis underlying price -20 to +20 from strike (21 range)
     double arr[630][9];
@@ -16,10 +16,10 @@ int generate(){
         for(int k = (strike-10); k < (strike+11); ++k){
             double volatility = i;
             volatility /= 100;
-            auto* b = new BlackScholes(k,50,.05,volatility,1,true);
+            auto* b = new BlackScholes(k,strike,.05,volatility,1,true);
             arr[k-strike+10+(21*((i/10)-1))][0] = volatility;
             arr[k-strike+10+(21*((i/10)-1))][1] = k;
-            arr[k-strike+10+(21*((i/10)-1))][2] = 50;
+            arr[k-strike+10+(21*((i/10)-1))][2] = strike;
             arr[k-strike+10+(21*((i/10)-1))][3] = b->getPrice();
             arr[k-strike+10+(21*((i/10)-1))][4] = b->getDelta();
             arr[k-strike+10+(21*((i/10)-1))][5] = b->getGamma();
@@ -44,6 +44,7 @@ int generate(){
 
 void write_csv(double *a, int nrows, int ncols, ofstream &outs)
 {
+    //generate proper column headers
     outs << "volatility";
     outs << ',';
     outs << "underlying_price";
